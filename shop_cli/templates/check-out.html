@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_1.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_2.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <script src="/static/js/common.js"></script>
+  </head>
+  <body class="animsition">
+    <div class="checkout" id="page">
+      <nav id="menu">
+        <ul>
+          <li><a href="/index">首页</a></li>
+		  <li><a href="/goods">商品列表</a></li>
+		  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+		  <li><a href="/<username>/cart">购物车</a></li>
+		  <li><a href="/<username>/checkout">结算</a></li>
+		  <li><a href="/login" style="padding-right:2px">登陆</a></li>
+          /
+		  <li><a href="/register" style="padding-left:2px">注册</a></li>
+        </ul>
+      </nav>
+      <header class="header-style-1 static">
+        <div class="container">
+          <div class="row">
+            <div class="header-1-inner">
+              <a class="brand-logo animsition-link" href="index.html">
+                <img class="img-responsive" src="/static/images/logo.png" alt="" />
+              </a>
+              <nav>
+                <ul class="menu hidden-xs">
+                  <li><a href="/index">首页</a></li>
+				  <li><a href="/goods">商品列表</a></li>
+				  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+				  <li><a id ="cart1" href="/<username>/cart">购物车</a></li>
+				  <li><a id ="checkout1" href="/<username>/checkout">结算</a></li>
+                  <li><a href="/login" id="login01" style="padding-right:2px">登陆</a></li>
+                  /
+		          <li><a href="/register" id="register01" style="padding-left:2px">注册</a></li>
+                </ul>
+              </nav>
+              <aside class="right">
+                <div class="widget widget-control-header">
+                  <div class="select-custom-wrapper">
+                    <select class="no-border">
+                      <option>USD</option>
+                      <option>VND</option>
+                      <option>EUR</option>
+                      <option>JPY</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-search-header">
+                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
+                    <span class="lnr lnr-magnifier"></span>
+                  </a>
+                  <div class="form-outer">
+                    <button class="btn-close-form-search-header js-close-search-form-header">
+                      <span class="lnr lnr-cross"></span>
+                    </button>
+                    <form>
+                      <input placeholder="Search" />
+                      <button class="search">
+                        <span class="lnr lnr-magnifier"></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
+                  <a class="control" href="/<username>/cart">
+                    <p class="counter">0</p>
+                    <span class="lnr lnr-cart"></span>
+                  </a>
+                </div>
+                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
+                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="sub-header shop-detail-1">
+        <img class="rellax bg-overlay" src="/static/images/sub-header/015.jpg" alt="">
+        <div class="overlay-call-to-action"></div>
+        <h3 class="heading-style-3">结算</h3>
+      </section>
+      <section class="boxed-sm">
+        <div class="container">
+          <div class="woocommerce" id="checkout_info">
+<!--checkout节点-->
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer-style-1">
+      <div class="container">
+        <div class="row">
+          <div class="footer-style-1-inner">
+            <div class="widget-footer widget-text col-first col-small">
+              <a href="#">
+                <img class="logo-footer" src="/static/images/logo.png" alt="Logo Organic" />
+              </a>
+              <div class="widget-link">
+                <ul>
+                  <li>
+                    <span class="lnr lnr-map-marker icon"></span>
+                    <span>379 5th Ave New York, NYC 10018</span>
+                  </li>
+                  <li>
+                    <span class="lnr lnr-phone-handset icon"></span>
+                    <a href="tel:0123456789">(+1) 96 716 6879</a>
+                  </li>
+                  <li>
+                    <span class="lnr lnr-envelope icon"></span>
+                    <a href="mailto: contact@site.com">contact@site.com </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-footer widget-link col-second col-medium">
+              <div class="list-link">
+                <h4 class="h4 heading">SHOP</h4>
+                <ul>
+                  <li>
+                    <a href="#">Food</a>
+                  </li>
+                  <li>
+                    <a href="#">Farm</a>
+                  </li>
+                  <li>
+                    <a href="#">Health</a>
+                  </li>
+                  <li>
+                    <a href="#">Organic</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-link">
+                <h4 class="h4 heading">SUPPORT</h4>
+                <ul>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-link">
+                <h4 class="h4 heading">MY ACCOUNT</h4>
+                <ul>
+                  <li>
+                    <a href="#">Sign In</a>
+                  </li>
+                  <li>
+                    <a href="#">My Cart</a>
+                  </li>
+                  <li>
+                    <a href="#">My Wishlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Check Out</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-footer widget-newsletter-footer col-last col-small">
+              <h4 class="h4 heading">NEWSLETTER</h4>
+              <p>Subscribe now to get daily updates</p>
+              <form class="organic-form form-inline btn-add-on circle border">
+                <div class="form-group">
+                  <input class="form-control pill transparent" placeholder="Your Email..." type="email" />
+                  <button class="btn btn-brand circle" type="submit">
+                    <i class="fa fa-envelope-o"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right style-1">
+        <div class="container">
+          <div class="row">
+            <div class="copy-right-inner">
+              <p>Copyright © 2017 Designed by AuThemes. All rights reserved.</p>
+              <div class="widget widget-footer widget-footer-creadit-card">
+                <ul class="list-unstyle">
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-01.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-02.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-03.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-04.png" alt="creadit card" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/static/js/library/jquery.min.js"></script>
+    <script src="/static/js/library/bootstrap.min.js"></script>
+    <script src="/static/js/function-check-viewport.js"></script>
+    <script src="/static/js/library/slick.min.js"></script>
+    <script src="/static/js/library/select2.full.min.js"></script>
+    <script src="/static/js/library/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/library/jquery.mmenu.all.min.js"></script>
+    <script src="/static/js/library/rellax.min.js"></script>
+    <script src="/static/js/library/isotope.pkgd.min.js"></script>
+    <script src="/static/js/library/bootstrap-notify.min.js"></script>
+    <script src="/static/js/library/bootstrap-slider.js"></script>
+    <script src="/static/js/library/in-view.min.js"></script>
+    <script src="/static/js/library/countUp.js"></script>
+    <script src="/static/js/library/animsition.min.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/config-mm-menu.js"></script>
+
+    <script>
+    // <!-- product table -->
+    // http://127.0.0.1:5000/username/checkout
+    var url = document.location.toString();
+    var arrUrl = url.split("//");
+    //当前访问的博客博主
+    var check_username = arrUrl[1].split('/')[1];
+    var token = window.localStorage.getItem('dnblog_token');
+    //登陆的用户名
+    var username = window.localStorage.getItem('dnblog_user');
+    $.ajax({
+        // 请求方式
+        type: "get",
+        // url
+        url: "http://127.0.0.1:8000/v1/checkout/" + check_username,
+        beforeSend: function (request) {
+            request.setRequestHeader("Authorization", token);
+        },
+        success: function (result) {
+            // { 'code':200, 'username':'xxx', 'address':'xxx', 'phone':xxx, 'email':'xxx'
+            // 'data':[{'goods_id': xxx, 'goodsname':'xxx', 'goods_price':'xxx', 'goods_num':xxx},...]}
+            if (200 == result.code) {
+                html_check = '';
+                html_check += '<div class="row">';
+
+                //将表单提交换为ajax提交数据方式
+                html_check += '<div class="woocommerce-checkout">';
+
+
+                html_check += '<h4>收件人详情</h4>';
+                html_check += '<div class="row">';
+                html_check += '<div class="col-md-12">';
+                html_check += '<div class="form-group organic-form no-radius">';
+                html_check += '<label>姓名 *</label>';
+                html_check += '<input class="form-control" type="text" id="name" value="' + result.username + '">';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '<div class="row">';
+                html_check += '<div class="col-md-12">';
+                html_check += '<div class="form-group organic-form no-radius">';
+                html_check += '<label>地址 *</label>';
+                html_check += '<input class="form-control" type="text" id="address" value="' + result.address + '">';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '<div class="row">';
+                html_check += '<div class="col-md-12">';
+                html_check += '<div class="form-group organic-form no-radius">';
+                html_check += '<label>电话 *</label>';
+                html_check += '<input class="form-control" type="text" id="phone" value="' + result.phone + '">';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '<div class="row">';
+                html_check += '<div class="col-md-12">';
+                html_check += '<div class="form-group organic-form no-radius">';
+                html_check += '<label>邮箱 *</label>';
+                html_check += '<input class="form-control" type="text" id="email" value="' + result.email + '">';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '<div class="row">';
+                html_check += '<div class="col-md-12">';
+                html_check += '<div class="woocommerce-account-fields">';
+                html_check += '<div class="checkbox">';
+                html_check += '<label>';
+                html_check += '<input type="checkbox"> 保存联系信息 ？';
+                html_check += '</label>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '</div>';
+                html_check += '<div class="woocommerce-checkout-review-order">';
+                html_check += '<h4>购物清单</h4>';
+                html_check += '<table class="woocommerce-checkout-review-order-table">';
+                html_check += '<thead>';
+                html_check += '<tr>';
+                html_check += '<th class="product-name">产品</th>';
+                html_check += '<th class="product-total">小计</th>';
+                html_check += '</tr>';
+                html_check += '</thead>';
+                html_check += '<tbody id="checkbody">';
+                // { 'code':200, 'username':'xxx', 'address':'xxx', 'phone':xxx, 'email':'xxx'
+                // 'data':[{'goods_id': xxx, 'goodsname':'xxx', 'goods_price':'xxx', 'goods_num':xxx},...]}
+                var total = 0;
+                for(var i=0; i<result.data.length; i++){
+                    html_check += '<tr class="cart_item">';
+                    html_check += '<td class="product-name">' + result.data[i].goodsname;
+                    html_check += '<span class="product-quantity">× ' + result.data[i].goods_num + '</span>';
+                    html_check += '</td>';
+                    html_check += '<td class="product-total">';
+                    html_check += '<span class="woocommerce-Price-amount amount">';
+                    var subtotal =  parseFloat(result.data[i].price) * parseFloat(result.data[i].goods_num);
+                    console.log("subtotal:",subtotal);
+                    console.log(subtotal);
+                    total += subtotal;
+                    html_check += '<span class="woocommerce-Price-currencySymbol">&yen;</span>' + subtotal.toFixed(2) + '</span>';
+                    html_check += '</td>';
+                    html_check += '</tr>';
+                };
+                html_check += '</tbody>';
+                html_check += '<tfoot>';
+                html_check += '<tr class="order-total">';
+                html_check += '<th>总价</th>';
+                html_check += '<td>';
+                html_check += '<strong>';
+                html_check += '<span class="woocommerce-Price-amount amount">';
+                html_check += '<span class="woocommerce-Price-currencySymbol">&yen;</span><span id="totalPrice">' + total.toFixed(2) +
+                '</span>';
+                html_check += '</strong>';
+                html_check += '</td>';
+                html_check += '</tr>';
+                html_check += '</tfoot>';
+                html_check += '</table>';
+                html_check += '</div>';
+                html_check += '<div class="woocommerce-checkout-payment">';
+                html_check += '<div class="form-place-order">';
+                html_check += '<input class="place_order btn btn-brand pill" name="woocommerce_checkout_place_order"  value="购买" data-value="Place order" id="buy" onclick="buy_goods()">';
+                html_check += '</div>';
+                html_check += '</div>';
+
+
+                html_check += '</div>';
+
+
+                html_check += '</div>';
+                $('#checkout_info').html(html_check);
+            } else {
+                alert(result.error)
+            }
+        }
+    });
+    </script>
+
+    <script>
+
+    <!--注销,编辑实现-->
+    login_out();
+    </script>
+
+  </body>
+</html>
+

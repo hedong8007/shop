@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>personal</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_1.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_2.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+
+    <!--<script src="static/js/jquery.min.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/static/js/common.js"></script>
+  </head>
+  <body class="animsition animsition" background="/static/images/slider/2.jpg">
+    <div class="home-1" id="page">
+      <nav id="menu">
+        <ul>
+          <li><a href="/index">首页</a></li>
+		  <li><a href="/goods">商品列表</a></li>
+		  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+		  <li><a href="/<username>/cart">购物车</a></li>
+		  <li><a href="/<username>/checkout">结算</a></li>
+		  <li><a href="/login" id="login" style="padding-right:2px">登陆</a></li>
+          /
+		  <li><a href="/register" id="register" style="padding-left:2px">注册</a></li>
+        </ul>
+      </nav>
+      <header class="header-style-1">
+        <div class="container">
+          <div class="row">
+            <div class="header-1-inner">
+              <a class="brand-logo animsition-link" href="/static/index.html">
+                <img class="img-responsive" src="/static/images/logo.png" alt="" />
+              </a>
+              <nav>
+                <ul class="menu hidden-xs">
+                  <li><a href="/index">首页</a></li>
+				  <li><a href="/goods">商品列表</a></li>
+				  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+				  <li><a href="/<username>/cart">购物车</a></li>
+				  <li><a href="/<username>/checkout">结算</a></li>
+                  <li><a href="/login" id="login01" style="padding-right:2px">登陆</a></li>
+                  /
+		          <li><a href="/register" id="register01" style="padding-left:2px">注册</a></li>
+		          <li><a href="" id="personalinfo" style="padding-left:2px"></a></li>
+
+                </ul>
+              </nav>
+              <aside class="right">
+                <div class="widget widget-control-header">
+                  <div class="select-custom-wrapper">
+                    <select class="no-border">
+                      <option>USD</option>
+                      <option>VND</option>
+                      <option>EUR</option>
+                      <option>JPY</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-search-header">
+                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
+                    <span class="lnr lnr-magnifier"></span>
+                  </a>
+                  <div class="form-outer">
+                    <button class="btn-close-form-search-header js-close-search-form-header">
+                      <span class="lnr lnr-cross"></span>
+                    </button>
+                    <form>
+                      <input placeholder="Search" />
+                      <button class="search">
+                        <span class="lnr lnr-magnifier"></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
+                  <a class="control" href="/<username>/cart">
+                    <p class="counter">0</p>
+                    <span class="lnr lnr-cart"></span>
+                  </a>
+                </div>
+                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
+                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    </div>
+     <div id ='content' style="overflow-y:auto;"></div>
+  </body>
+</html>
+   <script src="/static/js/library/jquery.min.js"></script>
+    <script src="/static/js/library/bootstrap.min.js"></script>
+    <script src="/static/js/function-check-viewport.js"></script>
+    <script src="/static/js/library/slick.min.js"></script>
+    <script src="/static/js/library/select2.full.min.js"></script>
+    <script src="/static/js/library/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/library/jquery.mmenu.all.min.js"></script>
+    <script src="/static/js/library/rellax.min.js"></script>
+    <script src="/static/js/library/isotope.pkgd.min.js"></script>
+    <script src="/static/js/library/bootstrap-notify.min.js"></script>
+    <script src="/static/js/library/bootstrap-slider.js"></script>
+    <script src="/static/js/library/in-view.min.js"></script>
+    <script src="/static/js/library/countUp.js"></script>
+    <script src="/static/js/library/animsition.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/settings.css" />
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/layers.css" />
+    <link rel="stylesheet" type="text/css" href="/static/revolution/css/navigation.css" />
+    <script src="/static/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/static/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/static/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/config-banner-home-1.js">
+
+
+    </script>
+    <script src="/static/js/config-mm-menu.js"></script>
+    <script src="/static/js/config-set-bg-blog-thumb.js"></script>
+    <script src="/static/js/config-isotope-product-home-1.js">
+
+
+    </script>
+    <script src="/static/js/config-carousel-thumbnail.js"></script>
+    <script src="/static/js/config-carousel-product-quickview.js"></script>
+    <!-- Demo Only-->
+    <script src="/static/js/demo-add-to-cart.js"></script>
+  <script>
+
+      var url = document.location.toString();
+      var arrUrl = url.split("//");
+      //当前访问用户
+      var blog_username = arrUrl[1].split('/')[1];
+      var html_body = '';
+      token = window.localStorage.getItem('dnblog_token');
+      //登陆的用户名
+      username = window.localStorage.getItem('dnblog_user');
+      console.log(username);
+      $.ajax({
+         // 请求方式
+         type:"get",
+         // url
+         url:"http://127.0.0.1:8000/v1/users/"+ blog_username,
+         beforeSend: function(request) {
+             request.setRequestHeader("Authorization", token);
+         },
+         success:function (result) {
+             if (200 == result.code){
+                 console.log(result);
+                 $(document).attr('title', '关于'+ result.data.nickname+'的个人信息');
+                 <!--header_html = makeHeader(blog_username, username)-->
+                 html_body='';
+                 <!--html_body += header_html-->
+
+                 html_body += '<div class="pagebg ab"> </div>';
+                 html_body += '<div class="container">';
+                 html_body += '<h1 class="t_nav"><span>个人简介</span>';
+                 html_body += '<p class="n1">关于我</p>';
+                 html_body += '</h1>';
+
+                 //加浮动属性
+                 html_body += '<div style="float:right ">'
+                 html_body += '<div class="news_infos">';
+                 //个人描述
+                 html_body += '<ul>';
+                 if(result.data.info){
+                    html_body += result.data.info;
+                 }else{
+                    html_body += '空空如也'
+                 }
+                 html_body += '</p>';
+                 <!--html_body += '</ul>';-->
+
+                 html_body += '</div>';
+
+
+                 html_body+='<div class="news_infos">'
+                 //电话
+                 html_body += '<ul>';
+                 html_body += '<p >电话:</p>';
+                 html_body += result.data.phone;
+                 html_body += '</ul>';
+                 html_body += '</div>';
+
+                 //地址
+                 html_body+='<div class="news_infos">'
+                 html_body += '<ul>';
+                 html_body += '<p >地址:</p>';
+                 html_body += result.data.address;
+                 html_body += '</ul>';
+                  html_body += '</div>';
+                  html_body += '</div>';
+
+
+                 html_body += '<div class="sidebar">';
+                 html_body += '<div class="about" style="margin-right:10px">';
+                 //avatar
+                 if (result.data.avatar) {
+                     var avatar_url = 'http://127.0.0.1:8000/media/'+ result.data.avatar;
+                     html_body += '<p class="avatar" > <img src=' + avatar_url + ' alt=""> </p>';
+                 }else{
+                     html_body += '<p class="avatar"><img src="/static/images/avatar.jpg" alt=""> </p>';
+
+                 }
+                 //nickname
+                 html_body += '<p class="abname">';
+                 html_body += result.data.nickname;
+
+                 html_body += '</p>';
+
+                 //简介
+                 html_body += '<p class="abtext"style="text-align:center">';
+                 if(result.data.sign){
+                    html_body += result.data.sign;
+                 }else{
+                    html_body += '空空如也'
+                 }
+                 html_body += '</p>';
+
+
+                 html_body += '</div>';
+                 html_body += '</div>';
+                 html_body += '</div>';
+                 //footer
+                 html_body += '<footer id="footer">';
+                 html_body += result.data.nickname;
+                 html_body += '</a>';
+                 html_body += '</footer>';
+                 $('#content').html(html_body);
+
+                 //初始化登出事件
+                 loginOut()
+
+                 //下拉菜单
+                 $('.nav>li').hover(function () {
+                     $(this).children('ul').stop(true, true).show(400);
+                 }, function () {
+                     $(this).children('ul').stop(true, true).hide(400);
+                 });
+             }else{
+                 alert(result.error)
+             }
+         }
+    });
+  </script>
+  <script>
+    login_out();
+  </script>

@@ -1,0 +1,157 @@
+项目名：蔬果电商
+
+功能：
+1. 用户功能：
+  a. 注册
+  b. 登录
+  c. 查询个人信息  about.html
+  d. 修改个人信息  change_info.html
+  e. 登出
+2. 商品功能：
+  a. 商品首页
+  b. 商品展示列表
+  c. 商品详情展示
+  d. 商品搜索
+  e. 购物车
+  f. 结算
+
+3. html:
+  a. 主页：index.html
+  b. 商品展示列表：shop.html
+  c. 商品详情展示: shop-detail.html
+  d. 购物车: shop-cart.html
+  e. 结算: check-out.html
+  f. 注册: register.html
+  g. 登录: login.html
+  h. 修改个人信息: change_info.html
+     查询个人信息  about.html
+
+
+4. 数据库:
+  a. User
+     username(主键)  nickname  password  email  phone  address  sign  info  avatar
+  b. goods
+     id  goodsname  price  unit  introduction  image  category_id(外键多对一)
+  c. cart
+     id  user(外键多对一)  goods_id(外键多对一)  goods_num
+     1    2     1    5
+     2    2     3    8
+     3    5     1    3
+  d. check  # 待结算表
+     id  user(外键多对一)  goods_id(外键多对一)  goods_num
+  e. checkout  # 结算表，保存结算历史记录
+     id  user(外键多对一)  datatime  goods_id  goods_price(考虑到价格变动)  goods_unit  goods_num  total_price  name(收件人)  phone(收件人电话)  address(实际收货地址)
+  f. category:
+     id  typename
+
+
+5. API:
+                            前端                                               后端                                              后端请求方式
+     首页:         http://127.0.0.1:8080/index                        http://127.0.0.1:8000/v1/index                                GET
+  a. 注册:         http://127.0.0.1:8080/register                     http://127.0.0.1:8000/v1/users                                POST
+  b. 登录          http://127.0.0.1:8080/login                        http://127.0.0.1:8000/v1/tokens                               POST
+  c. 查询个人信息  http://127.0.0.1:8080/<username>/info              http://127.0.0.1:8000/v1/users/<username>                     GET
+     局部信息查询                                                     http://127.0.0.1:8000/v1/users/<username>?nickname=1
+  d. 修改个人信息  http://127.0.0.1:8080/<username>/change_info       http://127.0.0.1:8000/v1/users/<username>                     PUT
+     上传头像                                                         http://127.0.0.1:8000/v1/users/<username>/avatar              POST
+  e. 登出                                                             删除cookie/session,回首页http://127.0.0.1:8080/v1/index
+  f. 商品展示列表  http://127.0.0.1:8080/goods?category=[vegetables|fruits]       http://127.0.0.1:8000/v1/goods?category=[vegetables|fruits]   GET
+  g. 商品详情展示  http://127.0.0.1:8080/goods/detail/<g_id>          http://127.0.0.1:8000/v1/goods?g_id=1111                      GET
+  l. 商品搜索                                                         'todo'
+  i. 购物车        http://127.0.0.1:8080/<username>/cart               http://127.0.0.1:8000/v1/cart/<username>                     GET
+  j. 结算          http://127.0.0.1:8080/<username>/checkout           http://127.0.0.1:8000/v1/checkout/<username>                 GET/POST
+
+6. 接口说明
+    1）首页  http://127.0.0.1:8000/v1/index  GET
+        请求格式：直接 GET 请求，获取goods中前5条数据
+        响应格式：{'code': 200 , 'data': [{'id': 1, 'goodsname':'abc', 'price': 123, 'image': 'abc'}, ...] }
+        异常响应示例：{'code':103, 'error':'请求数据不存在'}   code 100系列
+
+    2）注册  http://127.0.0.1:8000/v1/users  POST
+        请求格式：{'username': jack, 'email': 'abc@qq.com', 'password1': 'abcdef', 'password2': 'abcdef'}
+        响应格式：{'code': 200 ,'username': 'abc', 'data': {'token':'asdadasd.cvreijvd.dasdadad'} }  # token部分存入cookie
+        异常响应示例：{'code':203, 'error':'请输入用户名'}   code 200系列
+
+    3）登陆  http://127.0.0.1:8000/v1/tokens  POST
+        请求格式：{‘username’: ‘xxx’, ‘password’: ‘yyy’}
+        响应格式：{ 'code': 200 ,'username': 'abc', 'data': {'token':'asdadasd.cvreijvd.dasdadad'} }  # token部分存入cookie
+        异常响应示例：{'code':203, 'error':'请输入用户名'}   code 200系列
+
+    4）查询个人信息  http://127.0.0.1:8000/v1/users/<username>  GET
+        请求格式：直接GET请求，获取个人全部信息
+        响应格式：{‘code’:200,‘username’:’xiaoming’,‘data’:{‘nickname’:’abc’, ’sign’:’hello’, ‘avatar’: ’abc.jpg’,
+                    ‘info’: ‘hahahahah’, 'email':'xx@xx', 'phone':'xxx', 'address':'xxx'}}
+        异常响应示例： {‘code’:202, ‘error’: ‘please put data’}  code 200系列
+
+       查询个人信息--具体查询  http://127.0.0.1:8000/v1/users/<username>?nickname=1  GET
+        请求格式：根据查询字符串获取个人相关信息
+        响应格式：{‘code’:200, ‘username’:’123’, ‘data’:{‘nickname’:’abcde’} }
+        异常响应示例： {‘code’:202, ‘error’: ‘please put data’}  code 200系列
+
+    5）修改个人信息  http://127.0.0.1:8000/v1/users/<username>  PUT
+        请求格式：{ 'sign':xxx, 'info': xxxx, 'nickname': xxxx, 'phone': 'xxxx', 'address':'xxxx'}
+        响应格式：{ 'code':200, 'username': 'char'}
+        异常响应示例： {‘code’:202, ‘error’: ‘please put data’}  code 200系列
+
+    6）上传头像  http://127.0.0.1:8000/v1/users/<username>/avatar  POST  multipart/form-data
+        请求格式：avatar：表单中的图片
+        响应格式：{ 'code':200, 'username': 'char'}
+        异常响应示例： {‘code’:202, ‘error’: ‘please put data’}  code 200系列
+
+    7）登出  删除cookie/session,回首页http://127.0.0.1:8080/v1/index
+
+    8）商品展示列表  http://127.0.0.1:8000/v1/goods?category=[vegetables|fruits]  GET
+        请求格式：直接GET请求，获取前12商品信息，或根据category查询相关种类前12条商品信息
+        响应格式：{'code': 200 , 'data': [{'id': 1, 'goodsname':'abc', 'price': 123, 'image': 'abc'}, ...] }
+        异常响应示例： {‘code’:303, ‘error’: ‘no data’}  code 300系列
+
+    9）商品详情展示  http://127.0.0.1:8000/v1/goods?g_id=1111  GET
+        请求格式：直接GET请求，根据g_id查询对应商品详细信息，以及同类商品中随机4条商品信息
+        响应格式：{'code': 200 ,
+                   'data': {'id': 1, 'goodsname':'abc', 'price': 123, 'image': 'abc', 'introduction':'xxx', 'category':'xxx'},
+                   'related':[{'id': 2, 'goodsname':'abc', 'price': 123, 'image': 'abc'},...]}
+        异常响应示例： {‘code’:303, ‘error’: ‘no data’}  code 300系列
+
+    10）添加购物车商品：http://127.0.0.1:8000/v1/cart/<username>/add  # 'todo'
+        移除购物车商品：http://127.0.0.1:8000/v1/cart/<username>/del  # 'todo'
+
+        购物车  http://127.0.0.1:8000/v1/cart/<username>  GET
+        请求格式：直接GET请求，根据用户信息，返回对应用户购物车中信息
+        响应格式：{'code': 200 , 'data': [{'id': 1, 'goodsname':'abc', 'price': 123, 'unit':'xxx', 'image': 'abc', 'goods_num':123}, ...] }
+        异常响应示例： {‘code’:403, ‘error’: ‘request error’}  code 400系列
+
+    11）添加待结算信息：http://127.0.0.1:8000/v1/check/<username>  POST
+        1） 将cart中确定好的商品传给结算页
+            请求格式：{data:[{'goods_id':'xxx', 'goods_num':xxx},...]}
+	    响应格式：{'code':200} 响应200时重定向到结算页http://127.0.0.1:8080/<username>/checkout
+            异常响应示例：{‘code’:501, ‘error’: ‘trade error’}  code 500系列
+
+    12）结算  http://127.0.0.1:8000/v1/checkout/<username>   GET/POST
+        1）GET:
+                请求格式：直接GET请求待结算表中信息：
+                响应格式：{ 'code':200, 'username':'xxx', 'address':'xxx', 'phone':xxx, 'email':'xxx'
+                            'data':[{'goods_id': xxx, 'goodsname':'xxx', 'goods_price':'xxx', 'goods_num':xxx},...]}
+                异常响应示例： {‘code’:503, ‘error’: ‘trade error’}  code 500系列
+
+        2）POST: 将结算信息添加到checkout表中，同时删除check表中相应信息
+                请求格式：{ 'address':'xxx', 'phone':xxx, 'email':'xxx', 'name':'xxx'
+                            'data':[{'goods_id': xxx, 'goods_price':'xxx', 'goods_unit':'xxx', 'goods_num':xxx, 'total_price':xxx},...]}
+                响应格式：{'code': 200 , 'data': 'OK' }
+                异常响应示例： {‘code’:503, ‘error’: ‘trade error’}  code 500系列
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

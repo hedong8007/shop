@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_1.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_2.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <script src="/static/js/common.js"></script>
+  </head>
+  <body class="animsition">
+    <div class="shop-cart" id="page">
+      <nav id="menu">
+        <ul>
+          <li><a href="/index">首页</a></li>
+		  <li><a href="/goods">商品列表</a></li>
+		  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+		  <li><a href="/<username>/cart">购物车</a></li>
+		  <li><a href="/<username>/checkout">结算</a></li>
+		  <li><a href="/login"  style="padding-right:2px">登陆</a></li>
+          /
+		  <li><a href="/register"  style="padding-left:2px">注册</a></li>
+        </ul>
+      </nav>
+      <header class="header-style-1 static">
+        <div class="container">
+          <div class="row">
+            <div class="header-1-inner">
+              <a class="brand-logo animsition-link" href="index.html">
+                <img class="img-responsive" src="/static/images/logo.png" alt="" />
+              </a>
+              <nav>
+                <ul class="menu hidden-xs">
+                  <li><a href="/index">首页</a></li>
+				  <li><a href="/goods">商品列表</a></li>
+				  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+				  <li><a id ="cart1" href="/<username>/cart">购物车</a></li>
+				  <li><a id ="checkout1" href="/<username>/checkout">结算</a></li>
+                  <li><a href="/login" id="login01" style="padding-right:2px">登陆</a></li>
+                  /
+		          <li><a href="/register" id="register01" style="padding-left:2px">注册</a></li>
+                </ul>
+              </nav>
+              <aside class="right">
+                <div class="widget widget-control-header">
+                  <div class="select-custom-wrapper">
+                    <select class="no-border">
+                      <option>USD</option>
+                      <option>VND</option>
+                      <option>EUR</option>
+                      <option>JPY</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-search-header">
+                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
+                    <span class="lnr lnr-magnifier"></span>
+                  </a>
+                  <div class="form-outer">
+                    <button class="btn-close-form-search-header js-close-search-form-header">
+                      <span class="lnr lnr-cross"></span>
+                    </button>
+                    <form>
+                      <input placeholder="Search" />
+                      <button class="search">
+                        <span class="lnr lnr-magnifier"></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
+                  <a class="control" href="/<username>/cart">
+                    <p class="counter">0</p>
+                    <span class="lnr lnr-cart"></span>
+                  </a>
+                </div>
+                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
+                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="sub-header shop-detail-1">
+        <img class="rellax bg-overlay" src="/static/images/sub-header/013.jpg" alt="">
+        <div class="overlay-call-to-action"></div>
+        <h3 class="heading-style-3">购物车</h3>
+      </section>
+      <section class="boxed-sm">
+        <div class="container">
+          <div class="woocommerce" id="cart">
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer-style-1">
+      <div class="container">
+        <div class="row">
+          <div class="footer-style-1-inner">
+            <div class="widget-footer widget-text col-first col-small">
+              <a href="#">
+                <img class="logo-footer" src="/static/images/logo.png" alt="Logo Organic" />
+              </a>
+              <div class="widget-link">
+                <ul>
+                  <li>
+                    <span class="lnr lnr-map-marker icon"></span>
+                    <span>379 5th Ave New York, NYC 10018</span>
+                  </li>
+                  <li>
+                    <span class="lnr lnr-phone-handset icon"></span>
+                    <a href="tel:0123456789">(+1) 96 716 6879</a>
+                  </li>
+                  <li>
+                    <span class="lnr lnr-envelope icon"></span>
+                    <a href="mailto: contact@site.com">contact@site.com </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-footer widget-link col-second col-medium">
+              <div class="list-link">
+                <h4 class="h4 heading">SHOP</h4>
+                <ul>
+                  <li>
+                    <a href="#">Food</a>
+                  </li>
+                  <li>
+                    <a href="#">Farm</a>
+                  </li>
+                  <li>
+                    <a href="#">Health</a>
+                  </li>
+                  <li>
+                    <a href="#">Organic</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-link">
+                <h4 class="h4 heading">SUPPORT</h4>
+                <ul>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-link">
+                <h4 class="h4 heading">MY ACCOUNT</h4>
+                <ul>
+                  <li>
+                    <a href="#">Sign In</a>
+                  </li>
+                  <li>
+                    <a href="#">My Cart</a>
+                  </li>
+                  <li>
+                    <a href="#">My Wishlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Check Out</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-footer widget-newsletter-footer col-last col-small">
+              <h4 class="h4 heading">NEWSLETTER</h4>
+              <p>Subscribe now to get daily updates</p>
+              <form class="organic-form form-inline btn-add-on circle border">
+                <div class="form-group">
+                  <input class="form-control pill transparent" placeholder="Your Email..." type="email" />
+                  <button class="btn btn-brand circle" type="submit">
+                    <i class="fa fa-envelope-o"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right style-1">
+        <div class="container">
+          <div class="row">
+            <div class="copy-right-inner">
+              <p>Copyright © 2017 Designed by AuThemes. All rights reserved.</p>
+              <div class="widget widget-footer widget-footer-creadit-card">
+                <ul class="list-unstyle">
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-01.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-02.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-03.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-04.png" alt="creadit card" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="quick-view-product" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg modal-quickview woocommerce" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="woocommerce-product-gallery">
+                  <div class="main-carousel-product-quick-view">
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/01.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/02.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/03.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/04.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/05.jpg" alt="product thumbnail" />
+                    </div>
+                  </div>
+                  <div class="thumbnail-carousel-product-quickview">
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/01.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/02.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/03.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/04.jpg" alt="product thumbnail" />
+                    </div>
+                    <div class="item">
+                      <img class="img-responsive" src="/static/images/product/05.jpg" alt="product thumbnail" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="summary">
+                  <div class="desc">
+                    <div class="header-desc">
+                      <h2 class="product-title">Sald</h2>
+                      <p class="price">$2.00</p>
+                    </div>
+                    <div class="body-desc">
+                      <div class="woocommerce-product-details-short-description">
+                        <p>Duis vestibulum ante velit. Pellentesque orci felis, pharetra ut pharetra ut, interdum at mauris. Aenean efficitur aliquet libero sit amet scelerisque. Suspendisse efficitur mollis eleifend. Aliquam tortor nibh, venenatis quis
+                          sem dapibus, varius egestas lorem a sollicitudin. </p>
+                      </div>
+                    </div>
+                    <div class="footer-desc">
+                      <form class="cart">
+                        <div class="quantity buttons-added">
+                          <input class="minus" value="-" type="button" />
+                          <input class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" type="number" />
+                          <input class="plus" value="+" type="button" />
+                        </div>
+                        <div class="group-btn-control-wrapper">
+                          <button class="btn btn-brand no-radius">ADD TO CART</button>
+                          <button class="btn btn-wishlist btn-brand-ghost no-radius">
+                            <i class="fa fa-heart"></i>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="product-meta">
+                    <p class="posted-in">Categories:
+                      <a href="#" rel="tag">Food</a>
+                    </p>
+                    <p class="tagged-as">Tags:
+                      <a href="#" rel="tag">Natural</a>,
+                      <a href="#" rel="tag">Organic</a>,
+                      <a href="#" rel="tag">Health</a>,
+                      <a href="#" rel="tag">Green</a>,
+                      <a href="#" rel="tag">Vegetable</a>
+                    </p>
+                    <p class="id">ID:
+                      <a href="#">A203</a>
+                    </p>
+                  </div>
+                  <div class="widget-social align-left">
+                    <ul>
+                      <li>
+                        <a class="facebook" data-toggle="tooltip" title="Facebook" href="http://www.facebook.com/authemes">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="pinterest" data-toggle="tooltip" title="Pinterest" href="http://www.pinterest.com/authemes">
+                          <i class="fa fa-pinterest"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="twitter" data-toggle="tooltip" title="Twitter" href="http://www.twitter.com/authemes">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="google-plus" data-toggle="tooltip" title="Google Plus" href="https://plus.google.com/authemes">
+                          <i class="fa fa-google-plus"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="instagram" data-toggle="tooltip" title="Instagram" href="https://instagram.com/authemes">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/static/js/library/jquery.min.js"></script>
+    <script src="/static/js/library/bootstrap.min.js"></script>
+    <script src="/static/js/function-check-viewport.js"></script>
+    <script src="/static/js/library/slick.min.js"></script>
+    <script src="/static/js/library/select2.full.min.js"></script>
+    <script src="/static/js/library/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/library/jquery.mmenu.all.min.js"></script>
+    <script src="/static/js/library/rellax.min.js"></script>
+    <script src="/static/js/library/isotope.pkgd.min.js"></script>
+    <script src="/static/js/library/bootstrap-notify.min.js"></script>
+    <script src="/static/js/library/bootstrap-slider.js"></script>
+    <script src="/static/js/library/in-view.min.js"></script>
+    <script src="/static/js/library/countUp.js"></script>
+    <script src="/static/js/library/animsition.min.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/config-mm-menu.js"></script>
+
+
+    <script>
+
+
+    // <!-- product table -->
+    var url = document.location.toString();
+    var arrUrl = url.split("//");
+    //当前访问的博客博主
+    var cart_username = arrUrl[1].split('/')[1];
+    var token = window.localStorage.getItem('dnblog_token');
+    //登陆的用户名
+    var username = window.localStorage.getItem('dnblog_user');
+    $.ajax({
+        // 请求方式
+        type: "get",
+        // url
+        url: "http://127.0.0.1:8000/v1/cart/" + cart_username,
+        beforeSend: function (request) {
+            request.setRequestHeader("Authorization", token);
+        },
+        success: function (result) {
+            if (200 == result.code) {
+                var html_cart = '';
+                html_cart += '<form class="woocommerce-cart-form">';
+                html_cart += '<table class="woocommerce-cart-table">';
+                html_cart += '<thead>';
+                html_cart += '<tr>';
+                html_cart += '<th class="product-thumbnail">Product</th>';
+                html_cart += '<th class="product-name"></th>';
+                html_cart += '<th class="product-weight">Weight</th>';
+                html_cart += '<th class="product-quantity">Quantity</th>';
+                html_cart += '<th class="product-price">Price</th>';
+                html_cart += '<th class="product-subtotal">Total</th>';
+                html_cart += '<th class="product-remove"></th>';
+                html_cart += '</tr>';
+                html_cart += '</thead>';
+                html_cart += '<tbody id="cart-body">';
+                for (i = 0; i < result.data.length; i++) {
+                    //   < !--购物列表 -->
+                    // 响应格式：{'code': 200 , 'data': [{'id': 1, 'goodsname':'abc', 'price': 123, 'unit':'xxx', 'image': 'abc', 'goods_num':123}, ...]}
+                    html_cart += '<tr id="cart' + i + '">';
+                    html_cart += '<td class="product-thumbnail">';
+                    if (result.data[i].image) {
+                        var image_url = 'http://127.0.0.1:8000/media/product/' + result.data[i].image;
+                        html_cart += '<img src="' + image_url + '" alt="product-thumbnail">';
+                    } else {
+                        html_cart += '<img src="/static/images/product/thumb-cart-01.jpg" alt="product-thumbnail">';
+                    }
+                    html_cart += '</td>';
+                    html_cart += '<td class="product-name" data-title="Product">';
+                    html_cart += '<a class="product-name" href="'+ 'http://127.0.0.1:5000/goods/detail/' + result.data[i].id + '">' + result.data[i].goodsname + '</a>';
+                    html_cart += '</td>';
+                    html_cart += '<td class="product-weight" data-title="Weight">' + result.data[i].unit + '</td>';
+                    html_cart += '<td class="product-quantity" data-title="Quantity">';
+                    html_cart += '<input class="qty" step="1" min="0" max="" name="product-name" value='+result.data[i].goods_num+ ' '+'title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" type="number">';
+                    html_cart += '</td>';
+                    html_cart += '<td class="product-price" data-title="Price">&yen;' + result.data[i].price + '</td>';
+                    html_cart += '<td class="product-subtotal" data-title="Total">&yen;' + result.data[i].price*result.data[i].goods_num + '</td>';
+                    html_cart += '<td class="product-remove">';
+                    <!--html_cart += '<span>'+result.data[i].;&ndash;&gt;-->
+                    html_cart += '<a class="remove" href="#" aria-label="Remove this item" onclick="remove('+result.data[i].id+')">×<span style="visibility:hidden;display:none;">'+result.data[i].id+'<span></a>';
+                    html_cart += '</td>';
+                    html_cart += '</tr>';
+                }
+                html_cart += '</tbody>';
+                html_cart += '<tfoot>';
+                html_cart += '<tr>';
+                html_cart += '<td colspan="7">';
+                html_cart += '<div class="form-coupon organic-form">';
+                html_cart += '<div class="form-group update-cart">';
+                html_cart += '<a class="btn btn-brand-ghost pill">UPDATE CART</a>';
+                html_cart += '</div>';
+                html_cart += '</div>';
+                html_cart += '</td>';
+                html_cart += '</tr>';
+                html_cart += '</tfoot>';
+                html_cart += '</table>';
+                html_cart += '</form>';
+                html_cart += '<div class="cart_totals">';
+                html_cart += '<h3 class="title">Cart Total</h3>';
+                html_cart += '<div class="row">';
+                html_cart += '<div class="col-md-8">';
+                html_cart += '<table class="woocommerce-cart-subtotal" id="total">';
+                //   小计节点
+                html_cart += '</table>';
+                html_cart += '<div class="proceed-to-checkout">';
+                //   http://127.0.0.1:5000/<username>/checkout
+                html_cart += '<a class="btn btn-brand pill" id="checkout" onclick="check1_out()">去结算</a>';
+                html_cart += '</div>';
+                html_cart += '</div>';
+                html_cart += '</div>';
+                html_cart += '</div>';
+                // 加入到节点
+                $('#cart').html(html_cart);
+
+                //   总价部分
+                var html_total = '';
+                html_total += '<tbody>';
+                // 存储总价
+                var total_price_s = "&yen";
+                var total_price = 0;
+                // 添加list中所有商品小计
+                var cart_list = $("#cart-body>tr");
+                for (var i=0; i<cart_list.length; i++){
+                    html_total += '<tr id=subtotal' + i + '>';
+                    html_total += '<th>' + $(cart_list[i]).children(".product-name").text() + '</th>';
+                    <!--var subtoprice = $(cart_list[i]).children(".product-subtotal").text();-->
+                    var subtoprice = result.data[i].price;
+                    console.log("subtoprice:",subtoprice);
+                    <!--var subquantity = $(cart_list[i]).children("input[name='product-name']").value;-->
+                    var subquantity = result.data[i].goods_num;
+                    console.log("subquantity:",subquantity);
+                    subtotal=subtoprice*subquantity;
+                    subtotal_str=String(subtotal);
+                    console.log(subtotal_str);
+                    // <!--$2.26-->
+                    <!--total_price_s = subtotal_str.trim()[0];-->
+                    total_price += subtotal
+                    // <!--console.log(total_price);-->
+                    html_total += '<td data-title="Subtotal">' + subtotal_str + '</td>';
+                    html_total += '</tr>';
+                }
+                // 总计
+                html_total += '<tr id="total">';
+                html_total += '<th>总计</th>';
+                html_total += '<td data-title="Total">' + total_price + '</td>';
+                html_total += '</tr>';
+                html_total += '</tbody>';
+                $("#total").html(html_total)
+            } else {
+                alert(result.error)
+            }
+        }
+    });
+
+    </script>
+  </body>
+</html>
+
+<script>
+    $(function(){
+        // cart页数据自动调整功能
+        for(i=0;i<$("#cart-body>tr").length;i++){
+            var input_selector = "#cart" + i + " > td.product-quantity > input";
+            <!--console.log(input_selector);-->
+            input_node = $(input_selector)[0];
+            // console.log(input_node, input_node.value);
+            input_node.index = i;
+            // console.log(input_node.index);
+            $(input_node).bind('input porpertychange',function(){
+                // console.log(this);
+                // console.log(this.index);
+                // console.log(this.value);
+                var price_selector = "#cart"+this.index+" > td.product-price";
+                // console.log(price_selector);
+                var price = parseFloat($(price_selector).text().trim().slice(1));
+                <!--var price = parseFloat($("#cart0 > td.product-price").text().trim().slice(1));-->
+                // console.log(price);
+                var subtotal = "$" + (this.value * price).toFixed(2);
+                subltotal_selector_1 = "#cart" + this.index + " > td.product-subtotal"
+                $(subltotal_selector_1).html(subtotal);
+                // 小计中对应商品赋值
+                subltotal_selector_2 = "#subtotal" + this.index + " > td"
+                $(subltotal_selector_2).html(subtotal);
+                // 重新算总价
+                var total_price_s = "&yen";
+                var total_price = 0;
+                for(j=0;j<$("#cart-body>tr").length;j++){
+                    // #cart0 > td.product-subtotal;
+                    var selector = "#cart" + j + " > td.product-subtotal";
+                    // console.log($(selector).text());
+                    var subtotal = $(selector).text();
+                    <!--$2.26-->
+                    total_price_s = subtotal.trim()[0];
+                    total_price += parseFloat(subtotal.trim().slice(1));
+                };
+                $("#total > td").html(total_price_s + total_price.toFixed(2));
+            });
+        };
+
+
+    });
+    <!--注销,编辑,注销实现-->
+    login_out();
+</script>
+
+
+
+
+

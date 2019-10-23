@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_1.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main_2.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <script src="/static/js/common.js"></script>
+  </head>
+  <body class="animsition">
+    <div class="shop-detail-1 woocommerce" id="page">
+      <nav id="menu">
+        <ul>
+          <li><a href="/index">首页</a></li>
+		  <li><a href="/goods">商品列表</a></li>
+		  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+		  <li><a  href="/<username>/cart">购物车</a></li>
+		  <li><a  href="/<username>/checkout">结算</a></li>
+		  <li><a href="/login" style="padding-right:2px">登陆</a></li>
+          /
+		  <li><a href="/register" style="padding-left:2px">注册</a></li>
+        </ul>
+      </nav>
+      <header class="header-style-1 static">
+        <div class="container">
+          <div class="row">
+            <div class="header-1-inner">
+              <a class="brand-logo animsition-link" href="index.html">
+                <img class="img-responsive" src="/static/images/logo.png" alt="" />
+              </a>
+              <nav>
+                <ul class="menu hidden-xs">
+                  <li><a href="/index">首页</a></li>
+				  <li><a href="/goods">商品列表</a></li>
+				  <li><a href="/goods/detail/<g_id>">商品详情</a><li>
+				  <li><a id ="cart1" href="/<username>/cart">购物车</a></li>
+				  <li><a id ="checkout1" href="/<username>/checkout">结算</a></li>
+                  <li><a href="/login" id="login01" style="padding-right:2px">登陆</a></li>
+                  /
+		          <li><a href="/register" id="register01" style="padding-left:2px">注册</a></li>
+                </ul>
+              </nav>
+              <aside class="right">
+                <div class="widget widget-control-header">
+                  <div class="select-custom-wrapper">
+                    <select class="no-border">
+                      <option>USD</option>
+                      <option>VND</option>
+                      <option>EUR</option>
+                      <option>JPY</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-search-header">
+                  <a class="control btn-open-search-form js-open-search-form-header" href="#">
+                    <span class="lnr lnr-magnifier"></span>
+                  </a>
+                  <div class="form-outer">
+                    <button class="btn-close-form-search-header js-close-search-form-header">
+                      <span class="lnr lnr-cross"></span>
+                    </button>
+                    <form>
+                      <input placeholder="Search" />
+                      <button class="search">
+                        <span class="lnr lnr-magnifier"></span>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <div class="widget widget-control-header widget-shop-cart js-widget-shop-cart">
+                  <a class="control" href="/<username>/cart">
+                    <p class="counter">0</p>
+                    <span class="lnr lnr-cart"></span>
+                  </a>
+                </div>
+                <div class="widget widget-control-header hidden-lg hidden-md hidden-sm">
+                  <a class="navbar-toggle js-offcanvas-has-events" type="button" href="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="sub-header shop-detail-1">
+        <img class="rellax bg-overlay" src="/static/images/sub-header/01.jpg" alt="">
+        <div class="overlay-call-to-action"></div>
+        <h3 class="heading-style-3">Shop Detail</h3>
+      </section>
+      <section class="boxed-sm">
+        <div class="container">
+          <div class="row product-detail" id="detail">
+            <!--详情节点-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="relate-product">
+            <div class="heading-wrapper text-center">
+              <h3 class="heading">相关产品</h3>
+            </div>
+            <div class="row">
+              <div class="carousel-product" id="related-list">
+
+                <!--相关产品list-->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer-style-1">
+      <div class="container">
+        <div class="row">
+          <div class="footer-style-1-inner">
+            <div class="widget-footer widget-text col-first col-small">
+              <a href="#">
+                <img class="logo-footer" src="/static/images/logo.png" alt="Logo Organic" />
+              </a>
+              <div class="widget-link">
+                <ul>
+                  <li>
+                    <span class="lnr lnr-map-marker icon"></span>
+                    <span>379 5th Ave New York, NYC 10018</span>
+                  </li>
+                  <li>
+                    <span class="lnr lnr-phone-handset icon"></span>
+                    <a href="tel:0123456789">(+1) 96 716 6879</a>
+                  </li>
+                  <li>
+                    <span class="lnr lnr-envelope icon"></span>
+                    <a href="mailto: contact@site.com">contact@site.com </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-footer widget-link col-second col-medium">
+              <div class="list-link">
+                <h4 class="h4 heading">SHOP</h4>
+                <ul>
+                  <li>
+                    <a href="#">Food</a>
+                  </li>
+                  <li>
+                    <a href="#">Farm</a>
+                  </li>
+                  <li>
+                    <a href="#">Health</a>
+                  </li>
+                  <li>
+                    <a href="#">Organic</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-link">
+                <h4 class="h4 heading">SUPPORT</h4>
+                <ul>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#">FAQ</a>
+                  </li>
+                  <li>
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-link">
+                <h4 class="h4 heading">MY ACCOUNT</h4>
+                <ul>
+                  <li>
+                    <a href="#">Sign In</a>
+                  </li>
+                  <li>
+                    <a href="#">My Cart</a>
+                  </li>
+                  <li>
+                    <a href="#">My Wishlist</a>
+                  </li>
+                  <li>
+                    <a href="#">Check Out</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="widget-footer widget-newsletter-footer col-last col-small">
+              <h4 class="h4 heading">NEWSLETTER</h4>
+              <p>Subscribe now to get daily updates</p>
+              <form class="organic-form form-inline btn-add-on circle border">
+                <div class="form-group">
+                  <input class="form-control pill transparent" placeholder="Your Email..." type="email" />
+                  <button class="btn btn-brand circle" type="submit">
+                    <i class="fa fa-envelope-o"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right style-1">
+        <div class="container">
+          <div class="row">
+            <div class="copy-right-inner">
+              <p>Copyright © 2017 Designed by AuThemes. All rights reserved.</p>
+              <div class="widget widget-footer widget-footer-creadit-card">
+                <ul class="list-unstyle">
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-01.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-02.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-03.png" alt="creadit card" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="/static/images/icons/creadit-card-04.png" alt="creadit card" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="quick-view-product" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg modal-quickview woocommerce" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="woocommerce-product-gallery">
+                  <div class="main-carousel-product-quick-view">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script src="/static/js/library/jquery.min.js"></script>
+
+    <script src="/static/js/library/bootstrap.min.js"></script>
+    <script src="/static/js/function-check-viewport.js"></script>
+    <script src="/static/js/library/slick.min.js"></script>
+    <script src="/static/js/library/select2.full.min.js"></script>
+    <script src="/static/js/library/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/library/jquery.mmenu.all.min.js"></script>
+    <script src="/static/js/library/rellax.min.js"></script>
+    <script src="/static/js/library/isotope.pkgd.min.js"></script>
+    <script src="/static/js/library/bootstrap-notify.min.js"></script>
+    <script src="/static/js/library/bootstrap-slider.js"></script>
+    <script src="/static/js/library/in-view.min.js"></script>
+    <script src="/static/js/library/countUp.js"></script>
+    <script src="/static/js/library/animsition.min.js"></script>
+    <script src="/static/js/global.js"></script>
+    <script src="/static/js/config-mm-menu.js"></script>
+    <script src="/static/js/config-carousel.js"></script>
+    <script src="/static/js/config-carousel-thumbnail.js"></script>
+    <script src="/static/js/config-carousel-product-quickview.js"></script>
+    <!-- Demo Only-->
+    <script src="/static/js/demo-add-to-cart.js"></script>
+
+
+
+
+    <!-- ajax -->
+  <script>
+
+        var url = document.location.toString();
+        var arrUrl = url.split("//");
+        //当前访问的博客博主
+        var g_id = arrUrl[1].split('/')[3];
+        var i=0;
+        $.ajax({
+            // 请求方式
+            type: "get",
+            // url
+            url: "http://127.0.0.1:8000/v1/goods?g_id=" + g_id,
+            success: function (result) {
+                i+=1;
+                console.log("第",i,"ajax");
+                if (200 == result.code) {
+                    // <!--详情节点-->
+                    var html_detail = '';
+                    html_detail += '<div class="row main">';
+                    html_detail += '<div class="col-md-6">';
+                    html_detail += '<div class="woocommerce-product-gallery">';
+                    html_detail += '<div class="main-carousel">';
+                    html_detail += '<div class="item">';
+                    if (result.data[0].image) {
+                        var image_url = 'http://127.0.0.1:8000/media/products/' + result.data[0].image;
+                        html_detail += '<img class="img-responsive" src="' + image_url + '" alt="product thumbnail">';
+                    } else {
+                        html_detail += '<img class="img-responsive" src="/static/images/product/01.jpg" alt="product thumbnail">';
+                    }
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '<div class="col-md-6">';
+                    html_detail += '<div class="summary">';
+                    html_detail += '<div class="desc">';
+                    html_detail += '<div class="header-desc">';
+                    html_detail += '<h2 class="product-title">' + result.data[0].goodsname + '</h2>';
+                    html_detail += '<p class="price">' + result.data[0].price + '</p>';
+                    html_detail += '</div>';
+                    html_detail += '<div class="body-desc">';
+                    html_detail += '<div class="woocommerce-product-details-short-description">';
+                    html_detail += '<p>' + result.data[0].introduction + '</p>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '<div class="footer-desc">';
+                    html_detail += '<div class="cart">';
+                    <!--html_detail += '<input id="quantity" name="quantity" value="1">';-->
+
+                    html_detail += '<div class="quantity buttons-added">';
+                    html_detail += '<input class="minus" value="-" type="button">';
+                    html_detail += '<input id ="goodsnum" class="input-text qty text" step="1" min="1" max=""  value="1"title="Qty" size="4" pattern="[0-9]*" inputmode="numeric" type="number">';
+                    html_detail += '<input class="plus" value="+" type="button">';
+                    html_detail += '</div>';
+
+                    html_detail += '<button class="btn btn-brand no-radius" id="add-cart" onclick="quantity_post()">ADD TO CART</button>';
+                    <!--html_detail+='<button id="cart"></button>'-->
+                    <!--html_detail += '<button id="max">ADD TO CART</button>';-->
+                    html_detail += '<button class="btn btn-wishlist btn-brand-ghost no-radius">';
+                    html_detail += '<i class="fa fa-heart"></i>';
+                    html_detail += '</button>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '<div class="product-meta">';
+                    html_detail += '<p class="posted-in">Categories:';
+                    html_detail += '<a href="#" rel="tag">' + result.data[0].category + '</a>';
+                    html_detail += '</p>';
+                    html_detail += '<p class="id">ID:';
+                    html_detail += '<a href="#" id=goods_id>' + result.data[0].id + '</a>';
+                    html_detail += '</p>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    html_detail += '</div>';
+                    $("#detail").html(html_detail);
+
+                    var html_list = '';
+                    for(var i=0; i<result.related.length; i++){
+                        // < !--相关产品list-->
+                        html_list += '<div class="item">';
+                        html_list += '<figure class="item">';
+                        html_list += '<div class="product product-style-1">';
+                        html_list += '<div class="img-wrapper">';
+                        html_list += '<a href="http://127.0.0.1:5000/goods/detail/' + result.related[i].id + '">';
+                        if (result.related[i].image) {
+                            var image_url = 'http://127.0.0.1:8000/media/products/' + result.related[i].image;
+                            html_list += '<img class="img-responsive" src="' + image_url + '" alt="product thumbnail">';
+                        } else {
+                            html_list += '<img class="img-responsive" src="/static/images/product/01.jpg" alt="product thumbnail">';
+                        }
+                        html_list += '</a>';
+                        html_list += '<div class="product-control-wrapper bottom-right">';
+                        html_list += '<div class="wrapper-control-item">';
+                        html_list += '<a class="js-quick-view" href="#" type="button" data-toggle="modal" data-target="#quick-view-product">';
+                        html_list += '<span class="lnr lnr-eye"></span>';
+                        html_list += '</a>';
+                        html_list += '</div>';
+                        html_list += '<div class="wrapper-control-item item-wish-list">';
+                        html_list += '<a class="js-wish-list js-notify-add-wish-list" href="#">';
+                        html_list += '<span class="lnr lnr-heart"></span>';
+                        html_list += '</a>';
+                        html_list += '</div>';
+                        html_list += '<div class="wrapper-control-item item-add-cart js-action-add-cart">';
+                        html_list += '<a class="animate-icon-cart" href="#">';
+                        html_list += '<span class="lnr lnr-cart"></span>';
+                        html_list += '</a>';
+                        html_list += '<svg x="0px" y="0px" width="36px" height="32px" viewbox="0 0 36 32">';
+                        html_list += '<path stroke-dasharray="19.79 19.79" fill="none" ,="," stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" d="M9,17l3.9,3.9c0.1,0.1,0.2,0.1,0.3,0L23,11"></path>';
+                        html_list += '</svg>';
+                        html_list += '</div>';
+                        html_list += '</div>';
+                        html_list += '</div>';
+                        html_list += '<figcaption class="desc text-center">';
+                        html_list += '<h3>';
+                        html_list += '<a class="product-name" href="http://127.0.0.1:5000/goods/detail/' + result.related[i].id + '">' + result.related[i].goodsname + '</a>';
+                        html_list += '</h3>';
+                        html_list += '<span class="price">' + result.related[i].price + '</span>';
+                        html_list += '</figcaption>';
+                        html_list += '</div>';
+                        html_list += '</figure>';
+                        html_list += '</div>';
+                    }
+                    $("#related-list").html(html_list)
+                } else {
+                    alert(result.error)
+                }
+
+
+
+            }
+        });
+    </script>
+<button id="cart"></button>
+  </body>
+  </html>
+  <script>
+
+    //add to cart
+    // id  user(外键多对一)  goods_id(外键多对一)  goods_num
+    console.log("准备这");
+
+
+
+
+
+<!--注销,编辑 实现 -->
+    login_out();
+</script>
+
