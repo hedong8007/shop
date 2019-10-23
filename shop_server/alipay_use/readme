@@ -1,0 +1,7 @@
+调用支付宝接口:
+
+沙箱app应用
+
+
+安装alipay  sdk
+pip3 install python-alipay-sdk

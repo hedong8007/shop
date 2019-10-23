@@ -1,0 +1,58 @@
+-- MySQL dump 10.13  Distrib 5.7.27, for Linux (x86_64)
+--
+-- Host: localhost    Database: shop
+-- ------------------------------------------------------
+-- Server version	5.7.27-0ubuntu0.18.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `goods`
+--
+
+DROP TABLE IF EXISTS `goods`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `goods` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `goodsname` varchar(30) NOT NULL,
+  `price` decimal(5,2) NOT NULL,
+  `unit` varchar(10) NOT NULL,
+  `introduction` varchar(30) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `goods_category_id_565f1bd9_fk_category_id` (`category_id`),
+  CONSTRAINT `goods_category_id_565f1bd9_fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `goods`
+--
+
+LOCK TABLES `goods` WRITE;
+/*!40000 ALTER TABLE `goods` DISABLE KEYS */;
+INSERT INTO `goods` VALUES (1,'水蜜桃',23.50,'斤','个大皮薄,芳香四溢','1.jpg',3),(2,'苹果',10.50,'斤','甜美无比 甘甜适口 余味无穷','2.jpg',3),(3,'香蕉',15.40,'斤','成熟的香蕉是黄澄澄的,把它竖起来像个电话桶,横起来像一座拱桥','3.jpg',3),(4,'葡萄',20.50,'斤','葡萄皮是翠绿色的,像一颗颗碧玉似的翡翠,晶莹剔透','4.jpg',3),(5,'草莓',24.50,'斤','柔嫩汁多、形美味甜、芳香味浓、完莓演绎、演绎莓丽、鲜嫩欲滴、','5.jpg',3),(6,'樱桃',30.00,'斤','大又红的樱桃好似珍珠玛瑙般晶莹剔透,味道很甜','6.jpg',3),(7,'柠檬',15.30,'斤','柠檬是酸酸的心,盐是咸咸的泪,融在一起,就是爱情','7.jpg',3),(8,'梨',13.30,'斤','烟台梨,个大皮黄,咬一口,甜滋滋的梨水流在舌头上,','8.jpg',3),(50,'鸡腿',25.00,'斤','珍馐美味 色香味浓 外焦里嫩 清脆滑爽 玉盘珍馐','鸡腿.jpg',2),(51,'牛尾骨',66.00,'斤','牛尾巴营养价值极高,宜炖食','牛尾骨.jpg',2),(52,'三文鱼切片',78.00,'斤','三文鱼口感爽滑,肥而不腻,真滴好吃','三文鱼切片.jpg',2),(53,'小龙虾',128.00,'斤','鲜嫩的虾肉都会口水不止的流','小龙虾.jpg',2),(54,'新鲜牛腩',105.00,'斤','芳香四溢 香飘十里 油而不腻 质嫩爽口','新鲜牛腩.jpg',2),(55,'新鲜牛排',150.00,'斤','滋滋有味的牛排 香飘四溢的牛排','新鲜牛排.jpg',2),(56,'新鲜猪肉',45.00,'斤','脂肪洁白,肌肉有光泽,红色均匀,外表微干或微湿润','新鲜猪肉.jpg',2),(57,'新鲜猪排',65.00,'斤','优质蛋白质、脂肪，尤其是丰富的钙质','新鲜猪排.jpg',2),(101,'生菜',4.50,'斤','老一生鲜 西餐蔬菜 新鲜绿萝莎生菜 沙拉菜 500g','生菜.jpg',1),(102,'紫菊苣',28.80,'250g','地球紫菊苣西餐凉拌沙拉蔬菜','紫菊苣.jpg',1),(103,'西蓝花',20.80,'500g','有机西兰花 西蓝花 新鲜蔬菜 供港生鲜有机蔬菜','西蓝花.jpg',1),(104,'小油菜',13.50,'500g','火锅食材,新鲜蔬菜','小油菜.jpg',1),(105,'玉米',15.00,'斤','傲货玉米,黄糯玉米棒','玉米.jpg',1),(106,'红薯',16.80,'斤','沙地红薯地瓜小番薯','红薯.jpg',1),(107,'四季豆',13.80,'500g','有机宽芸豆,四季豆,新鲜蔬菜','四季豆.jpg',1),(108,'洋芋',16.60,'斤','绿鲜知,荷兰土豆,洋芋','洋芋.jpg',1);
+/*!40000 ALTER TABLE `goods` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-10-17 14:43:04
